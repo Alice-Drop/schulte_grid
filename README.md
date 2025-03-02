@@ -6,7 +6,7 @@ This is a HTML5 implementation of the Schulte Grid Test, designed to train and a
 
 
 
-**You can try it at**
+**You can try it at ** https://schulte.alicedrop.site/
 
 Or you can  upload the files to your web server or run them locally. There is no need for any additional backend support. 
 
