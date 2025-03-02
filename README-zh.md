@@ -1,6 +1,6 @@
 # 舒尔特方格 H5
 
-[English](https://github.com/Alice-Drop/schulte_grid/README.md) | 简体中文 
+[English](https://github.com/Alice-Drop/schulte_grid/blob/main/README.md) | 简体中文 
 
 本项目是一个基于HTML5的舒尔特方格测试，用于训练和检测用户的注意力与反应速度。可用于认知训练。
 
@@ -14,5 +14,5 @@
 
 ## License
 
-本项目使用 [MIT License](https://github.com/Alice-Drop/schulte_grid/LICENSE). 
+本项目使用 [MIT License](https://github.com/Alice-Drop/schulte_grid/blob/main/LICENSE). 
 
