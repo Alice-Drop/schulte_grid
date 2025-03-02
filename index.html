@@ -94,7 +94,7 @@
             opacity: 0.7;
         }
 
-        #feedback_displayer{
+        #feedback_display{
             height: 100px;
             display: flex;
             justify-content: center;
@@ -124,9 +124,9 @@
             </p>
             <p id="console"></p>
 
-            <div id="feedback_displayer">
+            <div id="feedback_display">
                 <img src="img/cat.jpg" alt="cat" id="img_cat" height="80px" style="border-radius: 10px;">
-                <img src="img/congratulation.gif" alt="" id="img_firework" height="90" class="hidden">
+                <img src="img/congratulation.gif" alt="" id="img_firework" height="90px" class="hidden">
                 <div id="testing_result" class="hidden"></div>
             </div>
             <br>
@@ -154,16 +154,16 @@
         同时诵读出声，施测者一旁记录所用时间。数完 25 个数字所用时间越短，注意力水平越高。
         */
         let my_console = document.getElementById("console")
-        current_num = 0  // 现在应该去点哪个。0表示未在测试中的idle状态防bug
+        let current_num = 0  // 现在应该去点哪个。0表示未在测试中的idle状态防bug
 
-        is_testing = false
-        is_paused = false
+        let is_testing = false
+        let is_paused = false
 
-        // 有几种状态：未开始测试，fales fales；开始测试，tf；测试中途暂停,tt；测试结束或终止，回ff
+        // 有几种状态：未开始测试，false false；开始测试，tf；测试中途暂停,tt；测试结束或终止，回ff
 
-        start_moment = 0
-        end_moment = 0
-        ext_duration = 0
+        let start_moment = 0
+        let end_moment = 0
+        let ext_duration = 0
 
         function btn_start_clicked(event){
             // 先判断是否是测试中，如果不是那就开始测试；如果在测试那就暂停
@@ -204,7 +204,7 @@
         }
 
         function continue_test(){
-            start_moment = new Date()  // 暂停之前的时间已经记在ext_druation里了
+            start_moment = new Date()  // 暂停之前的时间已经记在ext_duration里了
             is_paused = false
             change_start_button_apprence()
         }
@@ -246,8 +246,8 @@
                     if (is_blank){
                         col.textContent = ""
                     }else{
-                        selected_index = randint(0, numbers.length - 1)
-                        num = numbers.slice(selected_index, selected_index+1)
+                        let selected_index = randint(0, numbers.length - 1)
+                        let num = numbers[selected_index]
                         numbers.splice(selected_index, 1)
                         //my_console.innerText += numbers + "   selected:" + selected_index + "\n"
                         col.textContent = num
@@ -271,7 +271,7 @@
             let td = event.target
             if (current_num === 0){
                 // 未设计
-            }else if(current_num == Number(td.innerText)){
+            }else if(current_num === Number(td.innerText)){
                 //td.innerText = "000"
                 current_num += 1
                 cat_bounce()
